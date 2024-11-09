@@ -1,24 +1,21 @@
-# Compiled class file
-*.class
 
-# Log file
-*.log
+import java.util.Scanner;
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+class Test{
+      public static void main(String [] args) {
+       Scanner sc= new Scanner(System.in);
+        System.out.print("enter the string");
+        String str=sc.nextLine();
+        int flag=0;
+        int len=str.length();
+        for(int i=0;i<len/2;i++){
+            if(str.charAt(i)!=str.charAt(len-i-1))
+            flag=1;
+        }
+    if (flag==0){
+        System.out.println("palimorine");
+    }
+    else{
+        System.out.println("not palimorine");
+    }
+}}
